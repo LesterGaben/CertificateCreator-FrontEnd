@@ -1,0 +1,94 @@
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.certificate-template {
+    width: 60%;
+    height: auto;
+    margin: 20px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.15), 10px 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.input-form {
+    padding-left: 1%;
+    margin-top: 1%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.input-group {
+    display: flex;
+    gap: 5px;
+}
+
+.input-field {
+    border:2px solid #ccc;
+    width: 15vw;
+    margin: 5px 15px;
+    border-radius: 5px;
+}
+
+.buttons-block {
+    margin-top: 5px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.button {
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+
+    &:hover {
+        background-color:rgb(237, 237, 237);
+    }
+}
+
+.wrong-input {
+    color: red;
+    text-align: start;
+    margin-right: 9vw;
+    text-align: justify;
+}
+
+#creation-date-wrong-input{
+    margin-left: 3vw;
+}
+
+.get-certificate-button {
+    text-align: center;
+    cursor: pointer;
+    border: 5px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    background-color: white;
+    padding: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 30px 2px;
+
+    &:hover {
+        background-color:rgb(237, 237, 237);
+    }
+}

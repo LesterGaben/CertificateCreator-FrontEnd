@@ -1,0 +1,141 @@
+/*.certificate-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+    span, label {
+        position: absolute;
+        color: #004aad;
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+        height: auto;
+        max-width: max-content;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.fullname {
+    min-width: 104vh;
+    font-size: 4vw;
+    top: 36.5%;
+    left: 7%
+}
+
+.company-name {
+    min-width: 67.5vh;
+    font-size: 1.5vw;
+    top: 10%;
+    left: 23%
+}
+
+.course-name {
+    min-width: 70vh;
+    font-size: 1.5vw;
+    top: 59%;
+    left: 21%
+}
+
+.creation-date {
+    min-width: 23.8vh;
+    font-size: 1.25vw;
+    top: 74%;
+    left: 63.5%
+}
+
+.certificateId-label {
+    font-size: 0.55vw;
+    top: 94.9%;
+    left: 72.5%
+}
+
+.certificateId {
+    font-size: 0.55vw;
+    top: 95%;
+    left: 79%
+}*/
+
+.certificate-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+span {
+    position: absolute;
+    color: #004aad;
+    width: 100%;
+    text-align: center;
+    max-width: max-content;
+}
+
+.fullname {
+    min-width: 20%; 
+    font-size: 4vw; 
+    top: 36.5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.company-name {
+    min-width: 15%; 
+    font-size: 1.5vw;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.course-name {
+    min-width: 18%; 
+    font-size: 1.5vw;
+    top: 59%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.creation-date {
+    min-width: 10%; 
+    font-size: 1.7vw;
+    top: 74%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-string, .certificateId {
+    font-size: 0.7vw;
+    top: 95%;
+    transform: translateX(-50%);
+}
+
+.text-string {
+    left: 70.75%;
+}
+
+.certificateId {
+    left: 84%;
+}
+
+
+@media (max-width: 768px) {
+    .fullname, .company-name, .course-name, .creation-date {
+        font-size: 3vw;
+    }
+}

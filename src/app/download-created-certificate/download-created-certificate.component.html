@@ -1,0 +1,9 @@
+<div class="main-block">
+    <div class="created-certificate">
+        <pdf-viewer class="pdf-viewer" *ngIf="pdfSrc" [src]="pdfSrc" [render-text]="true"></pdf-viewer>
+    </div>
+    <div class="download-block">
+        <p class="text-block">Congratulations! Your certificate is ready</p>
+        <button class="button" type="button" (click)="downloadCertificate()">Download Certificate</button>
+    </div>
+</div>

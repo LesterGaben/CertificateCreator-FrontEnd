@@ -1,0 +1,14 @@
+<div class="main-block">
+    <div class="verify-text-block">Verify your certificate</div>
+    <form class="input-form">
+        <label class="input-field-label" for="input-field">Enter certificate Id:</label>
+        <input [ngStyle]="{'border': inputIdFiledError ? '3px solid red' : '3px solid #ccc'}" [ngStyle]="{'border': IdIsVerified ? '3px solid green' : '3px solid #ccc'}"
+         [(ngModel)]="inputIdFieldId" name="inputIdField" id="input-field"
+        class="input-field" type="text" title="certificateId" placeholder="Certificate Id">
+        <label [ngStyle]="{'visibility': inputIdFiledError ? 'visible' : 'hidden'}" class="wrong-input-label">Wrong input or empty field</label>
+        <button class="button" type="button" (click)="checkCertificateId()">Check Id</button>
+    </form>
+    <p [(ngModel)]="afterCheckIdText" [ngStyle]="{'visibility': IdIsChecked ? 'visible' : 'hidden'}" class="after-checkId-text">{{afterCheckIdText}}</p>
+    <button (click)="redirectToDownloadCertificate()" [ngStyle]="{'visibility': IdIsVerified ? 'visible' : 'hidden'}" class="button view-certificate-button" type="button">View your certificate</button>
+</div>
+<app-fixed-footer></app-fixed-footer>

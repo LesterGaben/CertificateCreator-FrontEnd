@@ -1,0 +1,46 @@
+.text-block {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    width: 100%;
+    font: 40px black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.templates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; // Це додасть простір між шаблонами
+    margin-bottom: 30px;
+}
+
+.template-item {
+    border: 4px solid gray;
+    margin: 10px; // Використовуйте margin для додавання простору навколо кожного шаблону, якщо потрібно
+    flex: 0 1 calc(30.333% - 20px); // За замовчуванням буде 3 елементи на рядок
+
+    &:hover {
+        border: 4px solid rgb(0, 166, 255);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+    .template-item {
+        flex: 0 1 calc(40% - 20px); // На екранах менше 768px буде 2 елементи на рядок
+    }
+}
+
+@media (max-width: 480px) {
+    .template-item {
+        flex: 0 1 calc(100% - 20px); // На екранах менше 480px буде 1 елемент на рядок
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

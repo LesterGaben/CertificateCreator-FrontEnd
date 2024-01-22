@@ -1,0 +1,56 @@
+<div class="main-container">
+    <div class="certificate-template" *ngIf="selectedTemplate | async as templateId" [ngSwitch]="templateId">
+        <certificate-template-1 *ngSwitchCase="'template-1'"></certificate-template-1>
+        <certificate-template-2 *ngSwitchCase="'template-2'"></certificate-template-2>
+        <certificate-template-3 *ngSwitchCase="'template-3'"></certificate-template-3>
+        <certificate-template-4 *ngSwitchCase="'template-4'"></certificate-template-4>
+        <certificate-template-5 *ngSwitchCase="'template-5'"></certificate-template-5>
+    </div>
+    <form class="input-form">
+        <p class="form-title">Complete the certificate:</p>
+        <div class="input-group">
+            <input [ngStyle]="{'border': validationErrors.fullName ? '2px solid red' : '2px solid #ccc'}" class="input-field" id="fullName" type="text" [(ngModel)]="certificateData.fullName" name="fullName" placeholder="Full name"> 
+            <button class="button" type="button" (click)="clearField('fullName')">Delete text</button>
+            <button (click)="submitData('fullName')" class="button" type="button">Submit</button>
+        </div>
+        <label [ngStyle]="{'visibility': validationErrors.fullName ? 'visible' : 'hidden'}" class="wrong-input" for="fullName">
+            Number of characters exceeds the allowed size
+        </label>
+
+        <div class="input-group">
+            <input [ngStyle]="{'border': validationErrors.courseName ? '2px solid red' : '2px solid #ccc'}" class="input-field" type="text" [(ngModel)]="certificateData.courseName" name="course-name" id="courseName" placeholder="Course name">
+            <button class="button" type="button" (click)="clearField('courseName')">Delete text</button>
+            <button class="button" (click)="submitData('courseName')" type="button">Submit</button>
+        </div>
+        <label [ngStyle]="{'visibility': validationErrors.courseName ? 'visible' : 'hidden'}" class="wrong-input" for="courseName">
+            Number of characters exceeds the allowed size
+        </label>
+
+        <div class="input-group">
+            <input [ngStyle]="{'border': validationErrors.companyName ? '2px solid red' : '2px solid #ccc'}" class="input-field" type="text" [(ngModel)]="certificateData.companyName" name="company-name" id="companyName" placeholder="Company name">
+            <button class="button" type="button" (click)="clearField('companyName')">Delete text</button>
+            <button class="button" (click)="submitData('companyName')" type="button">Submit</button>
+        </div>
+        <label [ngStyle]="{'visibility': validationErrors.companyName ? 'visible' : 'hidden'}" class="wrong-input" for="companyName">
+            Number of characters exceeds the allowed size
+        </label>
+
+        <div class="input-group">
+            <input [ngStyle]="{'border': validationErrors.creationDate ? '2px solid red' : '2px solid #ccc'}" class="input-field" type="text" [(ngModel)]="certificateData.creationDate" name="date" id="creationDate" placeholder="Date of certificate creation">
+            <button class="button" type="button" (click)="clearField('creationDate')">Delete text</button>
+            <button class="button" (click)="submitData('creationDate')" type="button">Submit</button>
+        </div>
+        <label [ngStyle]="{'visibility': validationErrors.creationDate ? 'visible' : 'hidden'}" class="wrong-input" id="creation-date-wrong-input" for="creationDate">
+            Date format is incorrect (use the format: dd.mm.yyyy) or the wrong day for the given month was entered
+        </label>
+
+        <div class="buttons-block">
+            <button class="button" type="button" (click)="clearAllFields()">Delete All Text</button>
+            <button class="button" type="button" (click)="submitAllFields()">Submit All Text</button>
+        </div>
+        
+
+        <button class="get-certificate-button" type="button" (click)="generateCertificate()">Generate certificate</button>
+    </form>
+</div>
+

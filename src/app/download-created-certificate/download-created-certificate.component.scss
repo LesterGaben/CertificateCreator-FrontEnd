@@ -1,0 +1,50 @@
+.main-block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.created-certificate {
+    width: 75%;
+    height: auto;
+    margin: 20px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.15), 10px 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-viewer {
+    display: block;
+    width: 149.75vh;
+    height: 107.09vh;
+}
+
+.download-block {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-block {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.button {
+    text-align: center;
+    cursor: pointer;
+    border: 5px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    background-color: white;
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 2px;
+
+    &:hover {
+        background-color:rgb(237, 237, 237);
+    }
+}
