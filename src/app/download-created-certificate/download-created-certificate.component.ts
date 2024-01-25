@@ -27,7 +27,7 @@ export class DownloadCreatedCertificateComponent implements OnInit {
     if (id) {
       const url = `https://localhost:7110/certificates/download?id=${id}`;
       this.http.get(url, { responseType: 'blob' }).subscribe((response: Blob) => {
-        // Тут ми перетворюємо Blob на безпечний URL, який можна використати в <pdf-viewer>
+        
         this.pdfSrc = URL.createObjectURL(response);
       }, error => {
         console.error("Error fetching PDF", error);

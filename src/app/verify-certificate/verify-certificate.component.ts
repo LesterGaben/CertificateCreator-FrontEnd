@@ -64,16 +64,16 @@ export class VerifyCertificateComponent {
   }
 
   private handleError(error: HttpErrorResponse) {
-    // Тут можна додати більш складну логіку обробки помилок
+
     if (error.error instanceof ErrorEvent) {
-      // Клієнтська або мережева помилка
+
       console.error('Виникла помилка:', error.error.message);
     } else {
-      // Сервер повернув код відповіді, який не є успішним
+
       console.error(`Сервер повернув код ${error.status}, ` +
                     `тіло помилки: ${error.error}`);
     }
-    // Повернення Observable з помилкою, щоб дозволити додатку продовжувати свою роботу
+
     return throwError('Щось пішло не так; спробуйте пізніше.');
   }
 
