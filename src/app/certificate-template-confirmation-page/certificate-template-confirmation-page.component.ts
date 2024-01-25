@@ -6,6 +6,7 @@ import { CertificateTemplate2Component } from '../certificate-templates-componen
 import { CertificateTemplate3Component } from '../certificate-templates-components/certificate-template-3/certificate-template-3.component';
 import { CertificateTemplate4Component } from '../certificate-templates-components/certificate-template-4/certificate-template-4.component';
 import { CertificateTemplate5Component } from '../certificate-templates-components/certificate-template-5/certificate-template-5.component';
+import { CertificateTemplate6Component } from '../certificate-templates-components/certificate-template-6/certificate-template-6.component';
 import { CertificateTemplateMoveService } from '../certificate-template-move.service/certificate-template-move.service';
 import { CertificateDataService } from '../certificate-data.service/certificate-data.service';
 import { AppFooterComponent } from '../app-fixed-footer/app-footer.component';
@@ -23,6 +24,7 @@ import { CommonModule } from '@angular/common';
     CertificateTemplate3Component,
     CertificateTemplate4Component,
     CertificateTemplate5Component,
+    CertificateTemplate6Component,
     AppFooterComponent
   ],
   templateUrl: './certificate-template-confirmation-page.component.html',

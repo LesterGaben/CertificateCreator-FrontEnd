@@ -1,0 +1,77 @@
+.certificate-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+span {
+    position: absolute;
+    color: #1f4690;
+    width: 100%;
+    text-align: center;
+    max-width: max-content;
+}
+
+.fullname {
+    min-width: 80%;
+    font-size: 2.05vw;
+    top: 49%;
+    left: 30%;
+    text-align: end;
+    transform: translateX(-50%);
+}
+
+.company-name {
+    min-width: 15%;
+    font-size: 1.75vw;
+    top: 7%;
+    left: 47.75%;
+    transform: translateX(-50%);
+}
+
+.course-name {
+    min-width: 18%;
+    font-size: 1.75vw;
+    top: 64.5%;
+    left: 48.75%;
+    transform: translateX(-50%);
+}
+
+.creation-date {
+    min-width: 10%;
+    font-size: 1.25vw;
+    top: 81.1%;
+    left: 49.5%;
+    transform: translateX(-50%);
+}
+
+.text-string, .certificateId {
+    font-size: 0.85vw;
+    top: 95%;
+    transform: translateX(-50%);
+}
+
+.text-string {
+    position: absolute;
+    color: #1f4690;
+    left: 39%;
+}
+
+.certificateId {
+    left: 55.75%;
+}
+
+@media (max-width: 768px) {
+    .fullname, .company-name, .course-name, .creation-date {
+        font-size: 3vw;
+    }
+}

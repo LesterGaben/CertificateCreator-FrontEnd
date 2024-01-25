@@ -6,6 +6,7 @@ import { CertificateTemplate2Component } from '../certificate-templates-componen
 import { CertificateTemplate3Component } from '../certificate-templates-components/certificate-template-3/certificate-template-3.component';
 import { CertificateTemplate4Component } from '../certificate-templates-components/certificate-template-4/certificate-template-4.component';
 import { CertificateTemplate5Component } from '../certificate-templates-components/certificate-template-5/certificate-template-5.component';
+import { CertificateTemplate6Component } from '../certificate-templates-components/certificate-template-6/certificate-template-6.component';
 import { CertificateTemplateMoveService } from '../certificate-template-move.service/certificate-template-move.service';
 import { CertificateDataService } from '../certificate-data.service/certificate-data.service';
 import { Router } from '@angular/router';
@@ -20,7 +21,8 @@ import { Router } from '@angular/router';
     CertificateTemplate2Component,
     CertificateTemplate3Component,
     CertificateTemplate4Component,
-    CertificateTemplate5Component
+    CertificateTemplate5Component,
+    CertificateTemplate6Component
   ],
   templateUrl: './choose-certificate-template-page.component.html',
   styleUrl: './choose-certificate-template-page.component.scss'
